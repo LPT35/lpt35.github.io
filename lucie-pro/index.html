@@ -4,59 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>Lucie L. | Portfolio</title>
+    <link rel="icon" href="https://fav.farm/📊">
+    <title>Lucie L. | Ingénieur Data & Dev</title>
     <style>
+        :root {
+            --bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            --card: rgba(255, 255, 255, 0.95);
+            --text: #2d3436;
+            --subtext: #636e72;
+            --btn-bg: #ffffff;
+            --btn-border: #e1e8ed;
+            --primary: #0984e3;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #1a1a1a;
+                --card: #2d2d2d;
+                --text: #f4f7f6;
+                --subtext: #a0a0a0;
+                --btn-bg: #3d3d3d;
+                --btn-border: #4a4a4a;
+                --primary: #74b9ff;
+            }
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
+            font-family: system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
         }
+
         .container {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            background: var(--card);
+            padding: 2.5rem 1.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             text-align: center;
             max-width: 400px;
-            width: 90%;
+            width: 85%;
         }
-        h1 { color: #2d3436; margin-bottom: 0.5rem; }
-        p { color: #636e72; margin-bottom: 2rem; }
+
+        .profile-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 20px; 
+            object-fit: cover;
+            border: 3px solid var(--primary);
+            margin-bottom: 1.2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .badge {
+            background: var(--primary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: 1.8rem; margin: 0; letter-spacing: -0.5px; }
+        .tagline { color: var(--subtext); font-size: 1rem; margin: 0.5rem 0 2rem 0; }
+
         .links { display: flex; flex-direction: column; gap: 1rem; }
+
         .btn {
             text-decoration: none;
-            background-color: #0984e3;
-            color: white;
-            padding: 12px;
-            border-radius: 8px;
-            transition: transform 0.2s, background-color 0.2s;
-            font-weight: bold;
+            background: var(--btn-bg);
+            color: var(--text);
+            padding: 14px;
+            border-radius: 12px;
+            font-weight: 600;
+            border: 1px solid var(--btn-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: 0.2s;
         }
-        .btn:hover {
-            background-color: #74b9ff;
-            transform: translateY(-2px);
+
+        .btn:active { transform: scale(0.98); }
+
+        /* BOUTON GITHUB (Masqué pour l'instant) */
+        .btn-github {
+            display: none; /* "none" en "flex" pour le faire réapparaître */
+            background: #000000 !important;
+            color: #ffffff !important;
+            border: none;
         }
-        .btn-github { background-color: #2d3436; }
-        .btn-github:hover { background-color: #4b4b4b; }
+
+        .footer { margin-top: 2rem; font-size: 0.8rem; color: var(--subtext); }
+
+        svg { flex-shrink: 0; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Lucie L.</h1>
-    <p>Bienvenue sur mon espace professionnel !</p>
+    <img src="LucieImage.jpg" alt="Lucie Image" class="profile-img">
+    
+    <br>
+    <span class="badge">Data & Dev</span>
+    <h1>Lucie Lepetit</h1>
+    <p class="tagline">Ingénieur Traitement de Données & Développement</p>
     
     <div class="links">
-        <a href="mon-cv.pdf" target="_blank" class="btn">📄 Mon CV (PDF)</a>
-        <a href="dossier-competences.pdf" target="_blank" class="btn">📄 Dossier de Compétences</a>
-        <a href="https://github.com/lpt35" target="_blank" class="btn btn-github">💻 Mon GitHub</a>
+        <a href="mon-cv.pdf" target="_blank" class="btn">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            Consulter le CV
+        </a>
+        <a href="dossier-competences.pdf" target="_blank" class="btn">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"></path></svg>
+            Consulter le dossier de compétences
+        </a>
+        <a href="https://github.com/lpt35" target="_blank" class="btn btn-github">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            Projets GitHub
+        </a>
     </div>
+
+    <div class="footer">&copy; 2026 Lucie L</div>
 </div>
+
+<script data-goatcounter="https://lucie.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
 </body>
 </html>
