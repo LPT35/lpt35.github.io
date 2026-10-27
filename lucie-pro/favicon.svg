@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Fond aux coins arrondis avec la couleur de ta carte en mode sombre -->
+  <rect width="100" height="100" rx="28" fill="#1e1e1e" />
+  <!-- Tes initiales LL en couleur saumon -->
+  <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="52" fill="#ff8a73">LL</text>
+</svg>
